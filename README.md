@@ -17,7 +17,15 @@
  https://github.com/user-attachments/assets/8f59ff8d-90ab-4a0c-a2d6-9346307f5de1
 
 ---
+## Note
 
+I don’t use Hyprland anymore, so I’m archiving this project.
+
+If you still want to use it, feel free to fork it and maintain it yourself. I might unarchive it in the future if I get a spare machine.
+
+You can still use the configs separately in your own dotfiles, which was always the main purpose of this project rather than directly copying my full setup :).
+
+---
 ## Features
 
 - **One-command theming** — Switch entire desktop look with `symphony switch`
