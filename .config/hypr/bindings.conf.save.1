@@ -20,7 +20,7 @@ $scrDir = ~/.config/hypr/scripts
 # Apps
 bindd = SUPER, RETURN, Terminal, exec, uwsm-app -- $terminal --dir="$(cwd-terminal)"
 bindd = SUPER, B, Browser, exec,  $browser
-bindd = SUPER, E, File manager, exec, uwsm app -- dolphin --new-window
+bindd = SUPER, E, File manager, exec, uwsm app -- nautilus --new-window
 bindd = SUPER, M, Toggle Fullscreen, fullscreen, 1
 bindd = SUPER, D, Discord, exec, uwsm app --  vesktop
 bindd = SUPER, O, obsidian, exec, obsidian # --disable-gpu
@@ -81,7 +81,7 @@ bind = SUPER SHIFT, S, exec, kitty --title share -e $scrDir/fileshare clipboard
 # Themes
 bindd = SUPER CTRL, SPACE, Matugen Themes Apply, exec, $rofiDir/selectWall
 bindd = SUPER ALT, SPACE, Wallpaper Picker, exec, $rofiDir/wallPicker
-bindd = CTRL ALT, SPACE, Cambiar fondo animado, exec, bash ~/.config/hypr/scripts/cambiar_fondo.sh
+bindd = CTRL ALT, SPACE, select swww wall, exec, $scrDir/change-theme
 bindd = SUPER CTRL SHIFT , SPACE, Theme Switcher, exec, ~/dotfiles/install/themes/symphony switch
 bindd = SUPER, I, Symphony TUI, exec, kitty --title symphony-tui -e ~/dotfiles/install/themes/symphony-tui
 bindd = SUPER ALT, I, Browse Themes, exec, kitty --title symphony-browse -e ~/dotfiles/install/themes/symphony browse

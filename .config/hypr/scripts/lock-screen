@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Sync hyprlock wallpaper from swww cache (fast inline version)
-CACHE="$HOME/.cache/swww"
+# Sync hyprlock wallpaper from awww cache (fast inline version)
+CACHE="$HOME/.cache/awww"
 MON=$(ls "$CACHE" 2>/dev/null | grep -v '_' | head -1)
 [[ -f "$CACHE/$MON" ]] && ln -sf "$(tr '\0' '\n' < "$CACHE/$MON" | sed -n '3p')" "$HOME/.cache/hyprlock-wallpaper"
 

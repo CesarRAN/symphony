@@ -20,7 +20,7 @@ $scrDir = ~/.config/hypr/scripts
 # Apps
 bindd = SUPER, RETURN, Terminal, exec, uwsm-app -- $terminal --dir="$(cwd-terminal)"
 bindd = SUPER, B, Browser, exec,  $browser
-bindd = SUPER, E, File manager, exec, uwsm app -- dolphin --new-window
+bindd = SUPER, E, File manager, exec, uwsm app -- nautilus --new-window
 bindd = SUPER, M, Toggle Fullscreen, fullscreen, 1
 bindd = SUPER, D, Discord, exec, uwsm app --  vesktop
 bindd = SUPER, O, obsidian, exec, obsidian # --disable-gpu
@@ -35,19 +35,19 @@ bindd = SUPER, S, Wiremix, exec, $terminal --class=Wiremix -e wiremix
 bindd = Super ALT, M, easyeffects, exec, easyeffects
 
 # WebApps
-# bindd = SUPER, A, Perplexity, exec, $webapp "https://perplexity.ai"
-# bindd = SUPER SHIFT, A, ChatGPT, exec, $webapp "https://chatgpt.com"
-# bindd = SUPER CTRL, A, Gemini, exec, $webapp "https://gemini.google.com"
+bindd = SUPER, A, Perplexity, exec, $webapp "https://perplexity.ai"
+bindd = SUPER SHIFT, A, ChatGPT, exec, $webapp "https://chatgpt.com"
+bindd = SUPER CTRL, A, Gemini, exec, $webapp "https://gemini.google.com"
 # bindd = SUPER ALT, A, Grok, exec, $webapp "https://grok.com"
-# bindd = ALT, C, Calendar, exec, $webapp "https://calendar.google.com"
-# bindd = SUPER, G, Github, exec, $webapp "https://github.com/vyrx-dev"
-# bindd = SUPER SHIFT, G, Gmail, exec, $webapp "https://mail.google.com/mail/u/1/"
-# bindd = SUPER, Y, YouTube, exec, $webapp "https://youtube.com/"
-# bindd = SUPER, W, WhatsApp, exec, $webapp "https://web.whatsapp.com/"
-# bindd = SUPER, X, X, exec, $webapp "https://x.com/"
-# bindd = SUPER, Z, Linkedin, exec, $webapp "https://www.linkedin.com/feed/"
-# bindd = SUPER, T, Todoist, exec, $webapp "https://app.todoist.com"
-# bindd = SUPER, BACKSLASH, Learn, exec, $webapp "https://devhints.io/"
+bindd = ALT, C, Calendar, exec, $webapp "https://calendar.google.com"
+bindd = SUPER, G, Github, exec, $webapp "https://github.com/vyrx-dev"
+bindd = SUPER SHIFT, G, Gmail, exec, $webapp "https://mail.google.com/mail/u/1/"
+bindd = SUPER, Y, YouTube, exec, $webapp "https://youtube.com/"
+bindd = SUPER, W, WhatsApp, exec, $webapp "https://web.whatsapp.com/"
+bindd = SUPER, X, X, exec, $webapp "https://x.com/"
+bindd = SUPER, Z, Linkedin, exec, $webapp "https://www.linkedin.com/feed/"
+bindd = SUPER, T, Todoist, exec, $webapp "https://app.todoist.com"
+bindd = SUPER, BACKSLASH, Learn, exec, $webapp "https://devhints.io/"
 
 # Tmux
 bind = SUPER SHIFT,return, exec, $terminal -e tmux a              #attach existing session
@@ -81,7 +81,7 @@ bind = SUPER SHIFT, S, exec, kitty --title share -e $scrDir/fileshare clipboard
 # Themes
 bindd = SUPER CTRL, SPACE, Matugen Themes Apply, exec, $rofiDir/selectWall
 bindd = SUPER ALT, SPACE, Wallpaper Picker, exec, $rofiDir/wallPicker
-bindd = CTRL ALT, SPACE, Cambiar fondo animado, exec, bash ~/.config/hypr/scripts/cambiar_fondo.sh
+bindd = CTRL ALT, SPACE, select swww wall, exec, $scrDir/change-theme
 bindd = SUPER CTRL SHIFT , SPACE, Theme Switcher, exec, ~/dotfiles/install/themes/symphony switch
 bindd = SUPER, I, Symphony TUI, exec, kitty --title symphony-tui -e ~/dotfiles/install/themes/symphony-tui
 bindd = SUPER ALT, I, Browse Themes, exec, kitty --title symphony-browse -e ~/dotfiles/install/themes/symphony browse
@@ -105,14 +105,14 @@ bindd = SUPER SHIFT, K,kill application, exec, hyprctl kill
 bindd = SUPER, K, Show all keybindings, exec, $rofiDir/keyhints
 
 # Screenshots
-bindd = , code:107, Screenshot with editing, exec, $scrDir/screenshot
+bindd = ,code  Screenshot with editing, exec, $scrDir/screenshot
 bindd = SHIFT, PRINT, Screenshot to clipboard, exec,$scrDir/screenshot smart clipboard 
 
 # Screen recordings
-bindd = SUPER , G, Record Screen, exec, $scrDir/screenrecord --with-desktop-audio
+bindd = SUPER , R, Record Screen, exec, $scrDir/screenrecord --with-desktop-audio
 bindd = SUPER SHIFT, R, Record + Mic, exec, $scrDir/screenrecord --with-microphone-audio
 bindd = SUPER ALT, R, Record + Mic + Webcam, exec, ~/Scripts/screenrecord --with-desktop-audio --with-microphone-audio --with-webcam
-# bindd = , code:107, Screenshot, exec, grim -g "$(slurp)" /home/cesar/doc_2/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png && notify-send "Captura Guardada" "Guardada en ~/doc_2/Screenshots"
+bindd = , code:107, Screenshot, exec, grim -g "$(slurp)" /home/cesar/doc_2/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png && notify-send "Captura Guardada" "Guardada en ~/doc_2/Screenshots"
 
 # Conversion
 # bindd = SUPER SHIFT, G, Convert mp4 video to gif, exec, $scrDir/video-to-gif 

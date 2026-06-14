@@ -60,6 +60,7 @@ bindd = SUPER SHIFT,I,Web App Install, exec, kitty --title webapp-install -e $sc
 # Close Windows
 bind = SUPER, Q, killactive,
 bind = , code:194, killactive,
+
 # Rofi
 bindd = ALT, comma, clipboard, exec, $rofiDir/clipboard
 bindd = SUPER SHIFT, M, rofibeats, exec, $rofiDir/rofibeats
@@ -81,7 +82,7 @@ bind = SUPER SHIFT, S, exec, kitty --title share -e $scrDir/fileshare clipboard
 # Themes
 bindd = SUPER CTRL, SPACE, Matugen Themes Apply, exec, $rofiDir/selectWall
 bindd = SUPER ALT, SPACE, Wallpaper Picker, exec, $rofiDir/wallPicker
-bindd = CTRL ALT, SPACE, Cambiar fondo animado, exec, bash ~/.config/hypr/scripts/cambiar_fondo.sh
+bindd = CTRL ALT, SPACE, select swww wall, exec, $scrDir/change-theme
 bindd = SUPER CTRL SHIFT , SPACE, Theme Switcher, exec, ~/dotfiles/install/themes/symphony switch
 bindd = SUPER, I, Symphony TUI, exec, kitty --title symphony-tui -e ~/dotfiles/install/themes/symphony-tui
 bindd = SUPER ALT, I, Browse Themes, exec, kitty --title symphony-browse -e ~/dotfiles/install/themes/symphony browse

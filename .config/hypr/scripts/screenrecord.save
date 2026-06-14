@@ -3,9 +3,12 @@
 # Definir la ruta específica de guardado
 OUTPUT_DIR="/home/cesar/doc_2/Video/Screenrecords"
 
-# Crear el directorio si no existe para evitar errores
+[[ -f ~/.config/user-dirs.dirs ]] && source ~/.config/user-dirs.dirs
+OUTPUT_DIR="${XDG_VIDEOS_DIR:-$/home/cesar/doc_2/Video/Screenrecords}"
+
 if [[ ! -d "$OUTPUT_DIR" ]]; then
-  mkdir -p "$OUTPUT_DIR"
+  notify-send "Screen recording directory does not exist: $OUTPUT_DIR" -u critical -t 3000
+  exit 1
 fi
 
 DESKTOP_AUDIO="false"
@@ -65,6 +68,7 @@ start_screenrecording() {
   [[ "$DESKTOP_AUDIO" == "true" ]] && audio_devices+="default_output"
 
   if [[ "$MICROPHONE_AUDIO" == "true" ]]; then
+    # Merge audio tracks into one - separate tracks only play one at a time in most players
     [[ -n "$audio_devices" ]] && audio_devices+="|"
     audio_devices+="default_input"
   fi
@@ -76,8 +80,9 @@ start_screenrecording() {
 }
 
 stop_screenrecording() {
-  pkill -SIGINT -f "^gpu-screen-recorder" 
+  pkill -SIGINT -f "^gpu-screen-recorder" # SIGINT required to save video properly
 
+  # Wait a maximum of 5 seconds to finish before hard killing
   local count=0
   while pgrep -f "^gpu-screen-recorder" >/dev/null && [ $count -lt 50 ]; do
     sleep 0.1
@@ -87,16 +92,16 @@ stop_screenrecording() {
   if pgrep -f "^gpu-screen-recorder" >/dev/null; then
     pkill -9 -f "^gpu-screen-recorder"
     cleanup_webcam
-    notify-send "Screen recording error" "Recording process had to be force-killed." -u critical -t 5000
+    notify-send "Screen recording error" "Recording process had to be force-killed. Video may be corrupted." -u critical -t 5000
   else
     cleanup_webcam
-    notify-send "Screen recording saved" "Saved to $OUTPUT_DIR" -t 2000
+    notify-send "Screen recording saved to $OUTPUT_DIR" -t 2000
   fi
   toggle_screenrecording_indicator
 }
 
 toggle_screenrecording_indicator() {
-  pkill -RTMIN+8 waybar 2>/dev/null
+  pkill -RTMIN+8 waybar
 }
 
 screenrecording_active() {
@@ -111,6 +116,7 @@ if screenrecording_active; then
   fi
 elif [[ "$STOP_RECORDING" == "false" ]]; then
   [[ "$WEBCAM" == "true" ]] && start_webcam_overlay
+
   start_screenrecording || cleanup_webcam
 else
   exit 1

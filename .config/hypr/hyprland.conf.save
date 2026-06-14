@@ -33,44 +33,4 @@ env = CLUTTER_BACKEND,wayland
 env = XDG_CURRENT_DESKTOP,Hyprland
 env = XDG_SESSION_TYPE,wayland
 env = XDG_SESSION_DESKTOP,Hyprland
-input {
-    kb_layout = es  # O 'us' según tu teclado
-    kb_variant =
-    kb_model =
-    kb_options =
-    follow_mouse = 1
-}
-
-
-# Atajos para alternar pantalla completa (sin hacer la ventana flotante)
-bind = , code:193, fullscreen, 1
-
-decoration {
-    active_opacity = 0.99    # Opacidad al estar enfocada
-    inactive_opacity = 0.60  # Opacidad al estar en segundo plano
-    
-    blur {
-        enabled = false
-        size = 1
-        passes = 1
-    }
-}
-
-# --- EXCEPCIONES DE OPACIDAD (100% OPACO) ---
-# Navegadores
-windowrule = match:class ^(firefox)$, opacity 1.0 override 1.0 override
-windowrule = match:class ^(google-chrome)$, opacity 1.0 override 1.0 override
-windowrule = match:class ^(Brave-browser)$, opacity 1.0 override 1.0 override
-windowrule = match:class ^(opera)$, opacity 1.0 override 1.0 override
-
-# Productividad y Lectura
-windowrule = match:class ^(code)$, opacity 1.0 override 1.0 override
-#windowrule = opacity 1.0 override 1.0 override, class:^(code)$
-#windowrule = opacity 1.0 override 1.0 override, class:^(code-url-handler)$
-#windowrule = opacity 1.0 override 1.0 override, class:^(okular)$
-#windowrule = opacity 1.0 override 1.0 override, class:^(org.kde.dolphin)$
-# Asegúrate de que awww-daemon ya esté iniciando
-exec-once = awww-daemon
-# Inicia tu script de cambio aleatorio
-exec-once = ~/.config/hypr/scripts/cambiar_fondo.sh
 

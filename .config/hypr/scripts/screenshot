@@ -2,7 +2,7 @@
 
 # sudo pacman -S grim slurp satty wl-clipboard jq  #dependencies
 [[ -f ~/.config/user-dirs.dirs ]] && source ~/.config/user-dirs.dirs
-OUTPUT_DIR="$HOME/Pictures/Screenshots"
+OUTPUT_DIR="$HOME/doc_2/Screenshots"
 
 if [[ ! -d "$OUTPUT_DIR" ]]; then
   notify-send "Screenshot directory does not exist: $OUTPUT_DIR" -u critical -t 3000
