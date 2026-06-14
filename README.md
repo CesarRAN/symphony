@@ -158,15 +158,17 @@ _RMPC + Cava visualizer_
 ## Installation
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/vyrx-dev/dotfiles/main/boot.sh | bash
+curl -fsSL https://raw.githubusercontent.com/CesarRAN/symphony/main/boot.sh | bash
 ```
 
-Or manually:
+Or install manually using SSH:
 
 ```bash
-git clone https://github.com/vyrx-dev/dotfiles ~/dotfiles
-cd ~/dotfiles && ./install.sh
+git clone git@github.com:CesarRAN/symphony.git ~/dotfiles
+cd ~/dotfiles
+./install.sh
 ```
+
 
 ### Themes Only
 
