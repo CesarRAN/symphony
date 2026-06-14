@@ -9,8 +9,7 @@
     "mpris"
   ],
   "modules-center": [
-    "hyprland/workspaces",
-    "niri/workspaces"
+    "hyprland/workspaces"
   ],
   "modules-right": [
     "group/tray-drawer",

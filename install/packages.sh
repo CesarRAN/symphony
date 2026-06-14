@@ -27,7 +27,7 @@ packages=(
 	eza bat fd ripgrep fzf zoxide jq
 
 	# Files
-	yazi nautilus 
+	yazi nautilus nautilus-dropbox
 
 	# Editor
 	neovim lazygit
@@ -44,7 +44,7 @@ packages=(
 
 	# Music
 	mpd mpc rmpc cava playerctl mpdscribble
-	spotify-launcher spicetify-cli mpd-mpris
+	spotify-launcher spicetify-cli
 
 	# Network & Bluetooth
 	networkmanager nmgui-bin kdeconnect
@@ -56,7 +56,7 @@ packages=(
 	gnome-keyring libsecret xorg-xhost libappindicator
 
 	# Theming
-	matugen nwg-look adw-gtk-theme bibata-cursor-theme-bin imagemagick
+	matugen-bin nwg-look adw-gtk-theme bibata-cursor-theme-bin imagemagick
 
 	# Rofi Extras
 	rofimoji wtype
@@ -71,7 +71,7 @@ packages=(
 	sddm qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects
 
 	# Utilities
-	python-terminaltexteffects gum wget curl unzip localsend deno npm keyd tree-sitter-cli
+	python-terminaltexteffects gum wget curl unzip localsend deno npm keyd 
 )
 
 # ╭───────────────────────────────────────────────────────────────────────╮
@@ -79,10 +79,10 @@ packages=(
 # ╰───────────────────────────────────────────────────────────────────────╯
 
 applications=(
-	zen-browser-bin firefox chromium
+	 zen-browser-bin firefox chromium
 	obsidian bitwarden code visual-studio-code-bin
 	vesktop-bin discord keychain zed opencode
-	mpv yt-dlp steam lutris gamemode mangohud typora sddm-silent-theme nautilus-dropbox
+	mpv yt-dlp steam lutris gamemode mangohud typora sddm-silent-theme
 )
 
 # ╭───────────────────────────────────────────────────────────────────────╮

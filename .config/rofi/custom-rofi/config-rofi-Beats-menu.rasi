@@ -3,7 +3,7 @@
 @import "~/.config/rofi/config.rasi"
 
 window {
-  width: 250px;
+  width: 320px;
 }
 
 mainbox {

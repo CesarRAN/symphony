@@ -12,7 +12,7 @@ browser=$(xdg-settings get default-web-browser)
 
 case $browser in
 brave-browser* | google-chrome* | microsoft-edge* | opera* | vivaldi* | helium-browser*) ;;
-*) browser="brave-browser.desktop" ;;
+*) browser="chromium.desktop" ;;
 esac
 
 browser_exec=$(sed -n 's/^Exec=\([^ ]*\).*/\1/p' /usr/share/applications/$browser 2>/dev/null | head -1)

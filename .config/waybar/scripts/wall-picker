@@ -1,17 +1,8 @@
 #!/bin/bash
 # Wallpaper picker - swww only (no theme changes)
 
-if command -v swww >/dev/null 2>&1; then
-    wallbin=swww
-elif command -v awww >/dev/null 2>&1; then
-    wallbin=awww
-else
-    noitfy-send "No wallpaper daemon found" "Please install awww or swww and try again"
-    exit 1 
-fi
-
 WALLPAPER_DIR="$HOME/Wallpapers/"
- WALLPAPER_PARAMS="--transition-fps 60 --transition-type=any --transition-duration=1"
+SWWW_PARAMS="--transition-fps 60 --transition-type=any --transition-duration=1"
 
 # Get focused monitor
 focused_monitor=$(hyprctl -j monitors | jq -r '.[] | select(.focused==true).name')
@@ -32,8 +23,8 @@ menu() {
   done | sort
 }
 
-# Start wallpaper daemon if needed
-"$wallbin" query &>/dev/null || "$wallbin"-daemon --format xrgb
+# Start swww if needed
+swww query &>/dev/null || swww-daemon --format xrgb
 
 # Show menu
 choice=$(menu | rofi -i -dmenu -config ~/.config/rofi/custom-rofi/config-wallpaper.rasi)
@@ -43,7 +34,7 @@ choice=$(menu | rofi -i -dmenu -config ~/.config/rofi/custom-rofi/config-wallpap
 for wallpaper in "${wallpapers[@]}"; do
   [[ "$(basename "$wallpaper")" == "$choice" ]] || continue
   
-  "$wallbin" img -o "$focused_monitor" "$wallpaper" $WALLPAPER_PARAMS
+  swww img -o "$focused_monitor" "$wallpaper" $SWWW_PARAMS
   notify-send -i "$wallpaper" "Wallpaper Changed" "$(basename "$wallpaper")"
   break
 done
