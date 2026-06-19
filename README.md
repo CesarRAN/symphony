@@ -158,13 +158,13 @@ Toggle between them with `Super + Ctrl + Backspace`
 ## Installation
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/vyrx-dev/dotfiles/main/boot.sh | bash
+curl -fsSL https://raw.githubusercontent.com/CesarRAN/dotfiles/main/boot.sh | bash
 ```
 
 Or manually:
 
 ```bash
-git clone https://github.com/vyrx-dev/dotfiles ~/dotfiles
+git clone https://github.com/CesarRAN/dotfiles ~/dotfiles
 cd ~/dotfiles && ./install.sh
 ```
 
@@ -339,12 +339,12 @@ Learned a lot from these projects:
 - [basecamp/omarchy](https://github.com/basecamp/omarchy)
 - [bjarneo/aether.nvim](https://github.com/bjarneo/aether.nvim)
 
-Wallpapers: [vyrx-dev/wallpapers](https://github.com/vyrx-dev/wallpapers)
+Wallpapers: [CesarRAN/wallpapers](https://github.com/CesarRAN/wallpapers)
 
 ---
 
 <div align="center">
 
-**[Report Bug](https://github.com/vyrx-dev/dotfiles/issues/new?template=bug_report.yml)** · **[Request Feature](https://github.com/vyrx-dev/dotfiles/issues/new?template=feature_request.yml)** · **[TODO](TODO.md)**
+**[Report Bug](https://github.com/CesarRAN/dotfiles/issues/new?template=bug_report.yml)** · **[Request Feature](https://github.com/CesarRAN/dotfiles/issues/new?template=feature_request.yml)** · **[TODO](TODO.md)**
 
 </div>

@@ -62,7 +62,7 @@ catch_error() {
     echo -e "${BOLD}    Scan to DM me on Discord, happy to help!${RESET}"
     echo
     echo -e "${DIM}    Or open an issue:${RESET}"
-    echo -e "    https://github.com/vyrx-dev/dotfiles/issues"
+    echo -e "    https://github.com/CesarRAN/dotfiles/issues"
     echo
     exit 1
 }

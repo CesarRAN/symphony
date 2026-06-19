@@ -1,6 +1,6 @@
 -- Symphony by vyrx
 -- Theme: Gruvbox Material
--- https://github.com/vyrx-dev
+-- https://github.com/CesarRAN
 
 return {
 	{

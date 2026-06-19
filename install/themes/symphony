@@ -7,7 +7,7 @@
 # ║   ███████║   ██║   ██║ ╚═╝ ██║██║     ██║  ██║╚██████╔╝██║ ╚████║   ██║   ║
 # ║   ╚══════╝   ╚═╝   ╚═╝     ╚═╝╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ║
 # ╚═══════════════════════════════════════════════════════════════════════════╝
-# https://github.com/vyrx-dev/dotfiles
+# https://github.com/CesarRAN/dotfiles
 
 set -e
 
@@ -262,7 +262,7 @@ FAQ:
     After this, themes auto-apply on every switch.
 
 EOF
-	echo "  Found a problem? https://github.com/vyrx-dev/dotfiles/issues/new"
+	echo "  Found a problem? https://github.com/CesarRAN/dotfiles/issues/new"
 }
 
 cmd_version() {
@@ -280,7 +280,7 @@ EOF
 	echo ""
 	echo "  Symphony v$VERSION"
 	echo "  Author: vyrx"
-	echo "  https://github.com/vyrx-dev/dotfiles"
+	echo "  https://github.com/CesarRAN/dotfiles"
 }
 
 # ╭───────────────────────────────────────────────────────────────────────╮

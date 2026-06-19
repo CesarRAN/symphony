@@ -9,7 +9,7 @@ I spend a lot of time with music — jazz, instrumentals, film scores. La La Lan
 ## Installation
 
 ```bash
-git clone https://github.com/vyrx-dev/dotfiles.git ~/dotfiles
+git clone https://github.com/CesarRAN/dotfiles.git ~/dotfiles
 cd ~/dotfiles/install/themes
 ./install.sh
 ```
@@ -58,7 +58,7 @@ Uninstall:
 
 </div>
 
-Wallpapers: [vyrx-dev/wallpapers](https://github.com/vyrx-dev/wallpapers)
+Wallpapers: [CesarRAN/wallpapers](https://github.com/CesarRAN/wallpapers)
 
 ## Usage
 
@@ -150,5 +150,5 @@ Thanks / Inspirations:
 - [InioX/matugen](https://github.com/InioX/matugen)
 
 Have an idea or found a bug?
-- Report a bug: [new bug](https://github.com/vyrx-dev/dotfiles/issues/new?template=bug_report.yml)
-- Request a feature: [new feature](https://github.com/vyrx-dev/dotfiles/issues/new?template=feature_request.yml)
+- Report a bug: [new bug](https://github.com/CesarRAN/dotfiles/issues/new?template=bug_report.yml)
+- Request a feature: [new feature](https://github.com/CesarRAN/dotfiles/issues/new?template=feature_request.yml)

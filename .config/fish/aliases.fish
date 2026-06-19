@@ -95,7 +95,7 @@ abbr -a folders 'du -h --max-depth=1'
 
 # Git aliases
 abbr -a gits 'git status'
-abbr -a ghs 'streaker vyrx-dev'
+abbr -a ghs 'streaker CesarRAN'
 abbr -a ghp 'gh repo create --public $(basename "$PWD") --source=. --description="desc" --push'
 
 # Grub Update

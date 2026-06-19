@@ -29,7 +29,7 @@ cat << 'EOF'
 EOF
 echo -e "${RESET}"
 
-REPO="${SYMPHONY_REPO:-vyrx-dev/dotfiles}"
+REPO="${SYMPHONY_REPO:-CesarRAN/dotfiles}"
 BRANCH="${SYMPHONY_BRANCH:-main}"
 DEST="${SYMPHONY_DEST:-$HOME/dotfiles}"
 

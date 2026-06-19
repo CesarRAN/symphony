@@ -8,8 +8,8 @@
 ```
 
 **Status**: In Development  
-**Current**: [v3.0.0](https://github.com/vyrx-dev/dotfiles/releases/tag/v3.0.0)  
-**Previous**: [v2.1.0](https://github.com/vyrx-dev/dotfiles/releases/tag/v2.1.0)
+**Current**: [v3.0.0](https://github.com/CesarRAN/dotfiles/releases/tag/v3.0.0)  
+**Previous**: [v2.1.0](https://github.com/CesarRAN/dotfiles/releases/tag/v2.1.0)
 
 ---
 
